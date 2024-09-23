@@ -1,14 +1,19 @@
-from banco_de_respostas import principal, fundo1
+from banco_de_respostas import principal, fundo1, fundo2
+import random
+import string
+from unidecode import unidecode
 # chaves para controle do while
 chave_interna = True
 chave_externa = True
 
 def menu():
-    menu = """
-        Você é aluno da PUC-GO?
+    menu = """\n\n\n\n\n
+Bot:    Você é aluno da PUC-GO?
+
         1: Sim, sou PUC-GO.
         2: Ainda não sou PUC-GO, mas quero muito de ser!
-        3: Encerrar.
+        3: Oi bot. Quem é você?
+        4: Encerrar.
     """
     print(menu)
 
@@ -17,7 +22,7 @@ def menu_escolhido(seletor):
         seletor = int(seletor)
         if seletor not in principal:
             raise ValueError("Seletor inválido")
-        print(f'Bot: \t{principal[seletor][0]}')
+        print(f'\n\n\nBot: \t{principal[seletor][0]}')
         for resposta in range(1, len(principal[seletor])):
             if callable(principal[seletor][resposta]):
                 principal[seletor][resposta]()
@@ -49,21 +54,32 @@ def escolha(seletor):
         print(fundo1[seletor][opcao])
     return True
 
+def clean_input(nome):
+    nome = clean_nome(nome)
+    pergunta = input(f"{nome}: ")
+    translator = str.maketrans('', '', string.punctuation)
+    pergunta = pergunta.translate(translator).lower()
+    pergunta = unidecode(pergunta)
+    return pergunta
 
+def clean_nome(nome):
+    nome = nome.split()
+    nome = nome[0].capitalize()
+    return nome
 
+# função para gerar 3 strings aleatórias a partir da função clean input
+def limitar_busca(entrada):
+    pergunta = entrada.split()
+    print(random.sample(pergunta, 3))
 
-# class Aluno:
-#     def __init__(self, nome, cpf, media):
-#         self.nome = nome
-#         self.cpf = cpf
-#         self.media = media
+def responder(pergunta, nome_usuario):
+    # Tokenizar a pergunta em palavras
+    palavras_pergunta = set(pergunta.split())
 
-#     def __str__(self):
-#         return f'Nome: {self.nome}\nCPF: {self.cpf}\nMedia: {self.media}'
+    for chave, resposta in fundo2.items():
+        palavras_chave = set(chave.lower().split())
+        # Verificar se pelo menos 3 palavras da pergunta estão na chave
+        if len(palavras_pergunta.intersection(palavras_chave)) >= 2:
+            return print(f"Bot: "+resposta)
 
-#     def criar_aluno(self, nome, cpf):
-#         self.nome = nome
-#         self.cpf = cpf
-
-#     def media_aluno(self, nota1, nota2):
-#         self.media = (nota1 + nota2) / 2
+    return print(f"Desculpe {clean_nome(nome_usuario)}, não entendi sua pergunta.")

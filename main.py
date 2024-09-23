@@ -21,6 +21,16 @@ while chave_externa:
             chave_interna = escolha(entrada)
             chave_interna
     elif entrada == "3":
+        print("Bot: Sou o assistente virtual da PUC-GO.")
+        nome_usuario = input("Qual o seu nome? ")
+        while True:
+            pergunta = clean_input(nome_usuario)
+            if pergunta == "sair":
+                break
+            responder(pergunta, nome_usuario)
+
+
+    elif entrada == "4":
         break
     else:
         print("Opção inválida. Tente novamente.")
