@@ -7,14 +7,14 @@ principal = {
         2:"Emitir comprovante de matricula.",
         3:"Emitir certificado de conclusão de curso.",
         4:"Indicar amigos para estudar na PUC-GO.",
-        5:"Sair."},
+        5:"Voltar."},
     2: {0:"Você deseja fazer parte da nossa família. Escolha:",
         1:"Prova presencial.",
         2:"Prova online.",
         3:"Nota do ENEM",
         4:"Diploma ou transferência",
         5:"Conhecer nossos cursos?",
-        6:"Sair."},
+        6:"Voltar."},
 }
 
 fundo1 ={

@@ -18,7 +18,10 @@ while chave_externa:
             # for key, value in banco_de_respostas.items():
             #     print(f'{key}: {value[0]}')
     elif entrada == "2":
-        pass
+        while chave_interna:
+            menu_escolhido(entrada)
+            chave_interna = escolha(entrada)
+            chave_interna
     elif entrada == "3":
         break
     else:
