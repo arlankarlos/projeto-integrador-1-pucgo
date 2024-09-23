@@ -1,5 +1,6 @@
 from respostas_util import *
 
+
 principal = {
 
     1: {0:"Fico feliz que faça parte da nossa família.\n\tEscolha:",
@@ -18,10 +19,10 @@ principal = {
 }
 
 fundo1 ={
-    1:{ 1:"Boleto de mensalidade emitido.",
-        2:"Comprovante de matricula emitido.",
+    1:{ 1:emitir_boleto,
+        2:emitir_comprovante,
         3:emitir_certificado,
-        4:"https://www.pucgoias.edu.br/estude-na-puc/",
+        4:indicar_amigo,
         },
 
     2:{ 1:"https://www.pucgoias.edu.br/estude-na-puc/ingresse-atraves-de-prova-presencial/",

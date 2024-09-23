@@ -15,8 +15,6 @@ while chave_externa:
             chave_interna = escolha(entrada)
             chave_interna
 
-            # for key, value in banco_de_respostas.items():
-            #     print(f'{key}: {value[0]}')
     elif entrada == "2":
         while chave_interna:
             menu_escolhido(entrada)
