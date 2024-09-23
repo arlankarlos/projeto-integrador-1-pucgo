@@ -1,5 +1,4 @@
 # Projeto Chat Bot
-from banco_de_respostas import principal, fundo1
 from uteis import *
 
 
@@ -20,11 +19,11 @@ while chave_externa:
             chave_interna = escolha(entrada)
             chave_interna
     elif entrada == "3":
-        print("Bot: Sou o assistente virtual da PUC-GO.")
+        print("Bot: Sou o assistente virtual da PUC-GO.\nBot: Digite 'sair' para encerrar o programa.\n")
         nome_usuario = input("Qual o seu nome? ")
         while True:
             pergunta = clean_input(nome_usuario)
-            if pergunta == "encerrar" or "fim" or "sair":
+            if pergunta == "sair":
                 break
             responder(pergunta, nome_usuario)
 
