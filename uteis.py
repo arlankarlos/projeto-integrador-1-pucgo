@@ -79,7 +79,7 @@ def responder(pergunta, nome_usuario):
     for chave, resposta in fundo2.items():
         palavras_chave = set(chave.lower().split())
         # Verificar se pelo menos 3 palavras da pergunta estão na chave
-        if len(palavras_pergunta.intersection(palavras_chave)) >= 2:
+        if len(palavras_pergunta.intersection(palavras_chave)) >= 3:
             return print(f"Bot: "+resposta)
 
     return print(f"Desculpe {clean_nome(nome_usuario)}, não entendi sua pergunta.")

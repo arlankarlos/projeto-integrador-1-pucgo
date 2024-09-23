@@ -25,7 +25,7 @@ while chave_externa:
         nome_usuario = input("Qual o seu nome? ")
         while True:
             pergunta = clean_input(nome_usuario)
-            if pergunta == "sair":
+            if pergunta == "encerrar" or "fim" or "sair":
                 break
             responder(pergunta, nome_usuario)
 
