@@ -11,6 +11,16 @@ minha_senha = os.environ["SENHA_EMAIL_PESSOAL"]
 
 def envia_email(corpo, destinatario, assunto):
     # Cria mensagem
+    """
+    Envia um email com o corpo, destinatário e assunto recebidos como parâmetro.
+
+    :param corpo: O conteúdo do email
+    :type corpo: str
+    :param destinatario: O email do destinatário
+    :type destinatario: str
+    :param assunto: O assunto do email
+    :type assunto: str
+    """
     mensagem = MIMEText(corpo)
     mensagem['From'] = meu_email
     mensagem['To'] = destinatario
@@ -22,6 +32,18 @@ def envia_email(corpo, destinatario, assunto):
         smtp.sendmail(meu_email, destinatario, mensagem.as_string())
 
 def emitir_certificado():
+    """
+    Requere um certificado com o nome, matrícula, curso e data de conclusão do aluno.
+
+    :param nome: O nome do aluno
+    :type nome: str
+    :param matricula: A matrícula do aluno
+    :type matricula: str
+    :param curso: O curso do aluno
+    :type curso: str
+    :param data_de_conclusao: A data de conclusão do curso do aluno
+    :type data_de_conclusao: str
+    """
     nome = input("Nome: ")
     matricula = input("Matrícula: ")
     curso = input("Curso: ")
@@ -31,6 +53,16 @@ def emitir_certificado():
     print("_"*20+"\n")
 
 def emitir_boleto():
+    """
+    Emite um boleto com o nome, email e matrícula do aluno.
+
+    :param nome: O nome do aluno
+    :type nome: str
+    :param email: O email do aluno
+    :type email: str
+    :param matricula: A matrícula do aluno
+    :type matricula: str
+    """
     nome = input("Nome: ")
     email = input("Email: ")
     matricula = input("Matrícula: ")
@@ -39,6 +71,20 @@ def emitir_boleto():
     print("_"*20+"\n")
 
 def indicar_amigo():
+    """
+    Indica um amigo para o PUC-GO.
+
+    :param nome_indicador: O nome do indicador
+    :type nome_indicador: str
+    :param email_indicador: O email do indicador
+    :type email_indicador: str
+    :param nome_amigo: O nome do amigo
+    :type nome_amigo: str
+    :param email_amigo: O email do amigo
+    :type email_amigo: str
+    :param telefone_amigo: O telefone do amigo
+    :type telefone_amigo: str
+    """
     nome_indicador = input("Seu nome: ")
     email_indicador = input("Email: ")
     print("Dados do amigo: ")
@@ -56,6 +102,18 @@ def indicar_amigo():
     print("_"*20+"\n")
 
 def emitir_comprovante():
+    """
+    Emite um comprovante de matrícula com o nome, email, matrícula e curso do aluno.
+
+    :param nome: O nome do aluno
+    :type nome: str
+    :param matricula: A matrícula do aluno
+    :type matricula: str
+    :param curso: O curso do aluno
+    :type curso: str
+    :param email: O email do aluno
+    :type email: str
+    """
     nome = input("Nome: ")
     matricula = input("Matrícula: ")
     curso = input("Curso: ")

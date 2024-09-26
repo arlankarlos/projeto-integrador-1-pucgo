@@ -13,6 +13,11 @@ from uteis import *
 
 def main() -> None:
 
+    """
+    Função principal do programa, responsável por executar o loop do chatbot e
+    controlar o fluxo do programa.
+
+    """
     while chave_externa:
 
         menu()
