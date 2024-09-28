@@ -7,7 +7,7 @@
 #### Aluno: Arlan Karlos Gouveia do Nascimento
 
 ## Proposta
-É um chatbot sem uso de inteligência artificial nem aprendizado de máquina. A proposta era realizar um chatbot com os recursos da linguagem Python, sem aplicação de APIs.
+O projeto consistiu na criação de um chatbot básico em Python, com o objetivo de fortalecer os conhecimentos fundamentais em programação. Sem o uso de APIs externas ou técnicas avançadas, o foco esteve na implementação de funcionalidades essenciais, como processamento de texto e tomada de decisões simples, utilizando apenas os recursos básicos da linguagem.
 
 ## Deploy
 
