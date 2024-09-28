@@ -1,18 +1,19 @@
 # Projeto Integrador - Chat Bot
 # Instituição: Pontifícia Universidade Católica de Goiás - PUC-GO
 # Curso: Big Data e Inteligência Artificial
-# Professor: Carlos Henrique Rorato Souza 
+# Professor: Carlos Henrique Rorato Souza
 # Disciplina: Projeto Integrador I-A
 # Aluno: Arlan Karlos Gouveia do Nascimento
 """
-bibliotecas: 
+bibliotecas:
 unidecode ### $ pip install unidecode
 dotenv ### $ pip install python-dotenv
 """
-from uteis import *
+from uteis import menu, menu_escolhido, escolha, clean_input, responder
+from uteis import chave_externa
+
 
 def main() -> None:
-
     """
     Função principal do programa, responsável por executar o loop do chatbot e
     controlar o fluxo do programa.
@@ -35,14 +36,15 @@ def main() -> None:
                 chave_interna = escolha(entrada)
                 chave_interna
         elif entrada == "3":
-            print("Bot: Sou o assistente virtual da PUC-GO.\nBot: Digite 'sair' para encerrar o programa.\n")
+            print(
+                "Bot: Sou o assistente virtual da PUC-GO.\nBot: Digite 'sair' para encerrar o programa.\n"
+            )
             nome_usuario = input("Qual o seu nome? ")
             while True:
                 pergunta = clean_input(nome_usuario)
                 if pergunta == "sair":
                     break
                 responder(pergunta, nome_usuario)
-
 
         elif entrada == "4":
             break
