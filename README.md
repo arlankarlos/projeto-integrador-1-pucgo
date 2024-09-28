@@ -1,5 +1,5 @@
 # Projeto Integrador - Chat Bot
-### Pontifícia Universidade Católica de Goiás - PUC Goiás ![PUC-GO](https://img.shields.io/badge/PUCGO-blue?style=plastic&link=https%3A%2F%2Fwww.pucgoias.edu.br%2F)
+### Pontifícia Universidade Católica de Goiás - PUC Goiás [![PUC-GO](https://img.shields.io/badge/PUCGO-blue?style=plastic&link=https%3A%2F%2Fwww.pucgoias.edu.br%2F)](https://www.pucgoias.edu.br/)
 
 #### Curso: Big Data e Inteligência Artificial
 #### Professor: Carlos Henrique Rorato Souza 
