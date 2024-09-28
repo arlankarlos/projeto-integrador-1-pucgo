@@ -7,7 +7,7 @@ principal = {
     1: {
         0: "Eu fico feliz que faça parte da nossa família.\n\tEscolha:\n",
         1: "Emitir boleto de mensalidade.",
-        2: "Emitir comprovante de matricula.",
+        2: "Emitir comprovante de matrícula.",
         3: "Emitir certificado de conclusão de curso.",
         4: "Indicar amigos para estudar na PUC-GO.",
         5: "Voltar.",
